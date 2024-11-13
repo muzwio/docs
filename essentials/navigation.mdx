@@ -1,66 +1,50 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: "Punishment"
 ---
 
-The navigation menu is the list of links on every website.
+Players can help keep SuperMC a clean, peaceful and safe environment by reporting people who disrupt the server.
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+---
+title: "Punishment"
+description: "The navigation field in mint.json defines the pages that go in the navigation menu"
+icon: "map"
+---
 
-## Navigation syntax
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
 
-<CodeGroup>
+<Tip>
+  Caught a player who didn't read the rules carefully? Then why don't you hurry up!
+</Tip>
 
-```json Regular Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
-    }
-]
-```
+## **There are some rules we have set to prevent this clean thinking from being abused;**
 
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
+1. The player cannot request a penalty without proof, witnesses are not a substitute for proof.
 
-</CodeGroup>
+2. If the player is 1.5 days (36 hours) late in submitting the evidence at the time of requesting a penalty, the evidence will be time-barred and no action will be taken. The player must indicate the date of the evidence when submitting it.
 
-## Folders
+3. If a player claims that a player is questionable and requests to be monitored, he/she has to prove his/her questionable behavior. The authorities refuse unsubstantiated requests for monitoring, respecting the privacy of the players.
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+4. The player may file a criminal claim against the official. If he/she fails to prove his/her claim, the official will be punished for false accusation.
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+5.
+   The player can withdraw the complaint from the player he/she is complaining about by requesting a penalty, except for penalties that damage the server such as bug usage, 3rd party software usage, if the complaint is requested to be withdrawn in cases that concern and disturb the person and cause damage, the penalty withdrawal is applied. The person who withdraws the complaint cannot complain about the same person, for the same reason, with the same evidence within 1 month.
+
+If you think that the **punishment are unfair**, a Penalty Appeal is required. You can appeal by creating a support request on our [Discord Server](https://discord.gg/superdc).
+
+# Punishment Appeal Rules
+
+* If the player's penalty has been in progress for more than 45 minutes, the player cannot appeal the penalty.
+
+* The player cannot appeal a penalty without evidence, witnesses are not evidence.
+
+* If the player behaves in an aggressive, threatening and accusatory manner towards the official dealing with him/her during the penalty appeal, the official has the right to reject the penalty appeal.
+
+* The player cannot appeal the penalty by claiming that he or she “did not know” the offense.
+
+* The player must NEVER leave the game when called for a cheat check. If he/she leaves the game, he/she will be banned for “Fleeing the cheat check”. After a player is banned, he/she can request control within 3 minutes. Players who do not request a check within 3 minutes will be DENIED WITHOUT EXCEPTION if they request a check after the time limit.
+
+* The Staff may refuse the player's request to find out the reason for the penalties not applied to him.
 
 <Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
+  Except for the rules for appealing penalties set out here, no appeal of any penalty is valid.
 </Warning>
-
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
